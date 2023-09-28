@@ -68,6 +68,14 @@ windower.register_event('load', function()
     end
 end)
 
+windower.register_event('login', function()
+    time_text:show()
+end)
+
+windower.register_event('logout', function()
+    time_text:hide()
+end)
+
 function moon_change()
     local info = windower.ffxi.get_info()
     time_text.moon_phase = res_moon_phases[info.moon_phase].ja
